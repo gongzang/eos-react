@@ -5,7 +5,7 @@ import {get} from '../utils/request';
 class Home extends React.Component {
 
     componentWillMount(){
-        get('http://localhost:3030/testMenu')
+        get('/testMenu')
         .then((res) => {
             alert(res);
             if (res.length === 1 ) {
@@ -17,28 +17,28 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <div class="nav-left wrap-menu">
+                <div className="nav-left wrap-menu">
 
                 </div>
-                <dev className='right-div'>
+                <div className='right-div'>
                     <div className="row border-bottom">
-                        <span class="logoTit">EOS</span><span class="logoSim">易才云平台</span>
-                        <div class="navbar-right">
-                            <span class="m-r-sm">你好，<span>系统管理员</span>！
+                        <span className="logoTit">EOS</span><span className="logoSim">易才云平台</span>
+                        <div className="navbar-right">
+                            <span className="m-r-sm">你好，<span>系统管理员</span>！
                                 欢迎登录
                             </span>
                             <a href="/eos-admin/logout">
-                                <i class="fa fa-sign-out"></i>
+                                <i className="fa fa-sign-out"></i>
                                 登出
                             </a>
                         </div>
                     </div>
-                    <div class="row white-bg border-bottom page-heading">
-                        <p class="breadcrumb" id="breadcrumb">后台账号管理</p>
+                    <div className="row white-bg border-bottom page-heading">
+                        <p className="breadcrumb" id="breadcrumb">后台账号管理</p>
                     </div>
                     <div className="row content">
                     </div>
-                </dev>
+                </div>
             </div>
         );
     }

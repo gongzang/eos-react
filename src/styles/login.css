@@ -1,0 +1,80 @@
+body{
+    background-color: #f3f3f4;
+}
+
+.loginscreen{
+    height: 618px;
+    width: 300px;
+    top: 50%;
+    margin-top: -309px;
+    margin-left: -150px;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+}
+
+.loginForm{
+    margin-top: 45px; 
+    text-align: center;
+}
+
+.form-control{
+    margin-bottom: 15px;
+    height: 32px;
+    background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 0px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 276px;
+    outline:none;
+}
+.form-control:focus {
+  border-color: #7697cc;
+}
+.loginEnter{
+    display: block;
+    color: #fff;
+    background: #215283;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline:none;
+    width: 100%;
+}
+.text-muted {
+    color: #888888;
+    text-align: center;
+}
+.copyright{
+    margin-top:15px; 
+}
+.mT35{
+    margin-top:35px; 
+    color: #9F9FA1;
+}
+.mTB0{
+    margin-top:0; 
+    margin-bottom:0; 
+}
+.logWhat {
+    color: #9fa0a0;
+}

@@ -8,6 +8,7 @@ export default function request(method, url, body) {
     } else {
         body = body && JSON.stringify(body);
     }
+    url = 'http://localhost:3030' + url;
 
     return fetch(url, {
         method,
