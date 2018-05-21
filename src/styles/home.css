@@ -1,0 +1,75 @@
+.nav-left{
+    float: left;
+    width: 220px;
+}
+.right-div{
+    background-color: #f3f3f4;
+    margin: 0 0 0 220px;
+    display: block;
+    position: relative;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e7eaec !important;
+}
+.row {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.logoTit {
+    font-size: 3.2em;
+    color: #e6e6e6;
+    font-weight: bold;
+    padding-left: 0.2em;
+}
+.logoSim {
+    color: #b5b5b6;
+    padding-left: 0.2em;
+}
+
+.navbar-right{
+    margin-right: 64px;
+    float: right;
+    color: #888888;
+    line-height: 48px;
+    height: 48px;
+}
+
+.m-r-sm{
+    margin-right: 10px;
+}
+
+.white-bg {
+    background: #fff;
+}
+.page-heading {
+    margin-top: -14px;
+    border-top: 0;
+    height: 40px;
+}
+.breadcrumb{
+    padding-left: 32px;
+    height: 40px;
+    line-height: 40px;
+}
+.content{
+    min-height: 800px;
+}
+
+
+
+.navbar-default .landing_link a, .navbar-default .nav > li.landing_link > a:focus {
+    background: #1c91c0;
+    color: white;
+}
+
+/* 
+.wrap-menu { overflow:auto; width:300px; background:#F6F6F6; font:12px/1.5 Tahoma,Arial,sans-serif}
+	.wrap-menu ul{ list-style:none; margin:0; padding:0;}
+	.wrap-menu ul li{ text-indent:3em; white-space:nowrap; }
+	.wrap-menu ul li h2{ cursor:pointer; height:100%; width:100%; margin:0 0 1px 0; font:12px/31px '宋体'; color:#fff; background:red;}
+	.wrap-menu ul li a{ display:block; outline:none; height:25px; line-height:25px; margin:1px 0; color:#1A385C; text-decoration:none;}
+	.wrap-menu ul li img{ margin-right:10px; margin-left:-17px; margin-top:9px; width:7px; height:7px; background:url(images/arrow.gif) no-repeat; border:none;}
+	.wrap-menu ul li img.unfold{ background-position:0 -9px;}
+	.wrap-menu ul li a:hover{ background-color:#ccc; background-image:none;} */
