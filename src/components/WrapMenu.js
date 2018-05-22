@@ -1,31 +1,36 @@
 import React from 'react';
-import '../styles/home.css';
+import '../styles/components/wrap-menu.css';
 
 class WrapMenu extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            menu: this.props.menu
-        };
     }
+
     render() {
-        const { menu } = this.props;
+        const { menu: { menuList, activeItem, openItem }, setOpenItem, setActiveItem } = this.props;
         return (
             <ul className="nav-left wrap-menu">
                 {
-                    menu && menu.length > 0 && (
-                        menu.map(item => {
+                    menuList && menuList.length > 0 && (
+                        menuList.map(item => {
                             return (
-                                <li>
-                                    <h2>{item.name}</h2>
+                                <li className={`${activeItem && item.name === activeItem.name ? 'active' : ''} ${openItem && item.name === openItem.name ? 'open' : ''}`}>
+                                    <a onClick={() => (item.submenu && item.submenu.length > 0 ? setOpenItem(item) : setActiveItem(item))}>
+                                        {item.name}
+                                        {
+                                            item.submenu && item.submenu.length > 0 && (
+                                                <span className='arrow'></span>
+                                            )
+                                        }
+                                    </a>
                                     {
                                         item.submenu && item.submenu.length > 0 && (
-                                            <ul>
+                                            <ul className={`sub-menu length${item.submenu.length} ${openItem && item.name === openItem.name ? 'in' : ''}`}>
                                                 {
                                                     item.submenu.map(subItem => {
                                                         return (
-                                                            <li>
-                                                                <h2>{subItem.name}</h2>
+                                                            <li className={`${activeItem && subItem.name === activeItem.name ? 'active' : ''}`}>
+                                                                <a onClick={() => setActiveItem(subItem)}>{subItem.name}</a>
                                                             </li>
                                                         )
                                                     })

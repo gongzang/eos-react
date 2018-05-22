@@ -21,9 +21,9 @@ class Home extends React.Component {
     render() {
         const {  menu } = this.props;
         return (
-            <div>
+            <div className='home-page'>
                 {console.log(this.props)}
-                <WrapMenu menu={menu}>
+                <WrapMenu {...this.props}>
 
                 </WrapMenu>
                 <div className='right-div'>
