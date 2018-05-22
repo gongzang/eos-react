@@ -34,7 +34,7 @@ export default function request(method, url, body) {
         });
 }
 
-export const get = url => request('GET', url);
-export const post = (url, body) => request('POST', url, body);
-export const put = (url, body) => request('PUT', url, body);
-export const del = (url, body) => request('DELETE', url, body);
+export const get = url => request.call(this,'GET', url);
+export const post = (url, body) => request.call(this,'POST', url, body);
+export const put = (url, body) => request.call(this,'PUT', url, body);
+export const del = (url, body) => request.call(this,'DELETE', url, body);

@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import configureStore from './configureStore';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
-const store = configureStore();
+import Reducer from './reducers/';
+import { createStore } from 'redux';
+// const store = configureStore();
+const store = createStore(Reducer);
+
   
 ReactDOM.render(
     <div>

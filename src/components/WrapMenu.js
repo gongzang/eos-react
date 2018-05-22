@@ -9,32 +9,34 @@ class WrapMenu extends React.Component {
         };
     }
     render() {
-        const { menu } = this.state;
+        const { menu } = this.props;
         return (
-            <ul>
+            <ul className="nav-left wrap-menu">
                 {
-                    menu.map(item => {
-                        return (
-                            <li>
-                                <h2>{item.name}</h2>
-                                {
-                                    menu.subMenu && menu.subMenu.length > 0 && (
-                                        <ul>
-                                            {
-                                                menu.subMenu.map(subItem => {
-                                                    return (
-                                                        <li>
-                                                            <h2>{subItem.name}</h2>
-                                                        </li>
-                                                    )
-                                                })
-                                            }
-                                        </ul>
-                                    )
-                                }
-                            </li>
-                        )
-                    })
+                    menu && menu.length > 0 && (
+                        menu.map(item => {
+                            return (
+                                <li>
+                                    <h2>{item.name}</h2>
+                                    {
+                                        item.submenu && item.submenu.length > 0 && (
+                                            <ul>
+                                                {
+                                                    item.submenu.map(subItem => {
+                                                        return (
+                                                            <li>
+                                                                <h2>{subItem.name}</h2>
+                                                            </li>
+                                                        )
+                                                    })
+                                                }
+                                            </ul>
+                                        )
+                                    }
+                                </li>
+                            )
+                        })
+                    )
                 }
             </ul>
         );

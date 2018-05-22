@@ -1,27 +1,33 @@
-import { compose, createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import rootReducer from './reducers'
+//看起来比较复杂
+//这里面还注入了redux-sage这个是用来进行异步操作的逻辑
+//在这里涉及不到。
 
-var buildStore
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware, { END } from 'redux-saga';
 
-// if (__DEBUG__) {
-//     buildStore = compose(
-//         applyMiddleware(thunk),
-//         require('redux-devtools').devTools(),
-//         require('redux-devtools').persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
-//     )(createStore)
-// } else {
-    buildStore = compose(applyMiddleware(thunk))(createStore)
-// }
+
+import rootReducer from './reducers/index'; //注入reducer到store
+import { createLogger } from 'redux-logger';
+
+const middlewares = [];
+
+
+// configuring saga middleware
+const sagaMiddleware = createSagaMiddleware();
+
+middlewares.push(sagaMiddleware);
+
+if (process.env.NODE_ENV === 'development') {
+    const logger = createLogger();
+    middlewares.push(logger);
+}
+const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 
 export default function configureStore(initialState) {
-    const store = buildStore(rootReducer, initialState)
+    const store = createStoreWithMiddleware(rootReducer, initialState);
+    // install saga run
+    store.runSaga = sagaMiddleware.run;
+    store.close = () => store.dispatch(END);
 
-    if(module.hot) {
-        module.hot.accept('./reducers', () => {
-            store.replaceReducer(require('./reducers'))
-        })
-    }
-
-    return store
+    return store;
 }
