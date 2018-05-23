@@ -24,7 +24,7 @@ class Login extends React.Component {
         })
             .then((res) => {
                 if (res) {
-                    this.props.history.push('/');
+                    this.props.history.push('/app');
                 } else {
                     alert('登录失败，账号或密码错误');
                 }

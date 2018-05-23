@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import './App.css';
 import PropTypes from 'prop-types';
 import HomePage from '../pages/Home';
@@ -18,8 +18,10 @@ class App extends Component {
     return (
       <Router props={this.props}>
         <div>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/login" component={LoginPage} />
+          <Switch>
+            <Route path="/app" component={HomePage} />
+            <Route exact path="/login" component={LoginPage} />
+          </Switch>
         </div>
       </Router>
     );

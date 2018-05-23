@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import '../styles/components/wrap-menu.css';
 
 class WrapMenu extends React.Component {
@@ -7,7 +8,7 @@ class WrapMenu extends React.Component {
     }
 
     render() {
-        const { menu: { menuList, activeItem, openItem }, setOpenItem, setActiveItem } = this.props;
+        const { menu: { menuList, activeItem, openItem }, setOpenItem, setActiveItem, match } = this.props;
         return (
             <ul className="nav-left wrap-menu">
                 {
@@ -15,14 +16,29 @@ class WrapMenu extends React.Component {
                         menuList.map(item => {
                             return (
                                 <li className={`${activeItem && item.name === activeItem.name ? 'active' : ''} ${openItem && item.name === openItem.name ? 'open' : ''}`}>
-                                    <a onClick={() => (item.submenu && item.submenu.length > 0 ? setOpenItem(item) : setActiveItem(item))}>
-                                        {item.name}
-                                        {
-                                            item.submenu && item.submenu.length > 0 && (
-                                                <span className='arrow'></span>
-                                            )
-                                        }
-                                    </a>
+                                    {(item.submenu && item.submenu.length > 0 ?
+                                        (
+                                            <a onClick={() => setOpenItem(item)}>
+                                                {item.name}
+                                                {
+                                                    item.submenu && item.submenu.length > 0 && (
+                                                        <span className='arrow'></span>
+                                                    )
+                                                }
+                                            </a>
+                                        )
+                                        :
+                                        (
+                                            <NavLink to={{ pathname: match.path + item.url }} onClick={() => setActiveItem(item)}>
+                                                {item.name}
+                                                {
+                                                    item.submenu && item.submenu.length > 0 && (
+                                                        <span className='arrow'></span>
+                                                    )
+                                                }
+                                            </NavLink>
+                                        )
+                                    )}
                                     {
                                         item.submenu && item.submenu.length > 0 && (
                                             <ul className={`sub-menu length${item.submenu.length} ${openItem && item.name === openItem.name ? 'in' : ''}`}>
@@ -30,7 +46,7 @@ class WrapMenu extends React.Component {
                                                     item.submenu.map(subItem => {
                                                         return (
                                                             <li className={`${activeItem && subItem.name === activeItem.name ? 'active' : ''}`}>
-                                                                <a onClick={() => setActiveItem(subItem)}>{subItem.name}</a>
+                                                                <NavLink to={{ pathname: match.path + subItem.url }} onClick={() => setActiveItem(subItem)}>{subItem.name}</NavLink>
                                                             </li>
                                                         )
                                                     })

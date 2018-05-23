@@ -1,21 +1,23 @@
 {
     "testMenu": [
         {
-            "name": "首页"
+            "name": "首页",
+            "url":"/emp/add"
         },
         {
             "name": "我的员工",
             "submenu": [
                 {
                     "name": "员工名册",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
-                    "name": "劳动合同"
+                    "name": "劳动合同",
+                    "url":"/emp/add"
                 },
                 {
                     "name": "社保/公积金账号",
-                    "url": ""
+                    "url": "/emp/add"
                 }
             ]
         },
@@ -24,47 +26,48 @@
             "submenu": [
                 {
                     "name": "增员",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
                     "name": "批量增员",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
                     "name": "增员进度查询",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
                     "name": "减员",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
                     "name": "批量减员",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
                     "name": "减员进度查询",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
                     "name": "查询订单",
-                    "url": ""
+                    "url": "/emp/add"
                 }
             ]
         },
         {
-            "name": "薪资管理"
+            "name": "薪资管理",
+            "url":"/emp/add"
         },
         {
             "name": "我的账单",
             "submenu": [
                 {
                     "name": "查询",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
                     "name": "打印",
-                    "url": ""
+                    "url": "/emp/add"
                 }
             ]
         },
@@ -73,17 +76,19 @@
             "submenu": [
                 {
                     "name": "组织架构",
-                    "url": ""
+                    "url": "/emp/add"
                 },
                 {
-                    "name": "菜单模板"
+                    "name": "菜单模板",
+                    "url": "/emp/add"
                 },
                 {
-                    "name": "修改密码"
+                    "name": "修改密码",
+                    "url": "/emp/add"
                 },
                 {
                     "name": "管理者账号",
-                    "url": ""
+                    "url": "/emp/add"
                 }
             ]
         }
