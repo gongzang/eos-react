@@ -1,34 +1,30 @@
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    -webkit-padding-start: 0;
-}
-
-.landing_link {
-    background: #1c91c0;
-    color: white;
-}
-.wrap-menu>li {
-    position: relative;
-    display: block;
-}
-.wrap-menu li>a{
+/* nav {
+    position: fixed; 
+    height: 100%; 
+    top: 0; left: 0; 
+    } */
+.wrap-menu a { 
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
     color: #a7b1c2;
     padding: 14px 20px 14px 25px;
     position: relative;
     display: block;
 }
-.wrap-menu  li > a:hover,
-.wrap-menu  li > a:focus {
+.wrap-menu   a:hover,
+.wrap-menu   a:focus {
   background-color: #293846;
   color: white;
 }
 
-.wrap-menu ul.sub-menu{
+
+.landing_link {
+    background: #1c91c0;
+    color: white;
+}
+
+.wrap-menu nav.sub-menu{
     height: 0;
     overflow: hidden;
     transition:height 0.4s;
@@ -67,43 +63,43 @@ ul, menu, dir {
     left: -16px;
 }
 
-.wrap-menu  li.active > a{
+.wrap-menu   a.landing_link{
     background: #197ea6 !important;
     color: white !important;
 }
 
-.sub-menu li>a{
+.sub-menu a{
     padding: 7px 10px 7px 10px;
     padding-left: 52px;
 }
 
-.wrap-menu ul.sub-menu.in,.wrap-menu  li.open{
+.wrap-menu nav.sub-menu.in,.wrap-menu  a.open{
     background-color: #293846;
 }
-.wrap-menu ul.sub-menu.length1.in{
+.wrap-menu nav.sub-menu.length1.in{
     height:31px;
 }
-.wrap-menu ul.sub-menu.length2.in{
+.wrap-menu nav.sub-menu.length2.in{
     height:62px;
 }
-.wrap-menu ul.sub-menu.length3.in{
+.wrap-menu nav.sub-menu.length3.in{
     height:93px;
 }
-.wrap-menu ul.sub-menu.length4.in{
+.wrap-menu nav.sub-menu.length4.in{
     height:124px;
 }
-.wrap-menu ul.sub-menu.length5.in{
+.wrap-menu nav.sub-menu.length5.in{
     height:155px;
 }
-.wrap-menu ul.sub-menu.length6.in{
+.wrap-menu nav.sub-menu.length6.in{
     height:186px;
 }
-.wrap-menu ul.sub-menu.length7.in{
+.wrap-menu nav.sub-menu.length7.in{
     height:217px;
 }
-.wrap-menu ul.sub-menu.length8.in{
+.wrap-menu nav.sub-menu.length8.in{
     height:248px;
 }
-.wrap-menu ul.sub-menu.length9.in{
+.wrap-menu nav.sub-menu.length9.in{
     height:279px;
 }

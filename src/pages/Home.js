@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/home.css';
 import { get } from '../utils/request';
-import WrapMenu from '../components/WrapMenu';
+import WrapMenu from '../components/menu/WrapMenu';
 import * as ItemsActions from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

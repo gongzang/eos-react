@@ -1,11 +1,10 @@
 import { SET_MENU, SET_OPEN_ITEM, SET_ACTIVE_ITEM } from '../constants/actionTypes';
 
-
 const initialState = {
-    menu:[],
+    menuList:[],
     openItem:{},
-    activeItem: {} 
-    };
+    activeItem:{}
+};
 
 export default function menu(state = initialState, action) {
     switch (action.type) {
