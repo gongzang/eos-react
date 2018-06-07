@@ -26,7 +26,6 @@ class Home extends React.Component {
         const { menu: { activeItem }, match } = this.props;
         return (
             <div className='home-page'>
-                {console.log(this.props)}
                 <WrapMenu {...this.props}>
 
                 </WrapMenu>
